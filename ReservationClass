@@ -1,0 +1,64 @@
+# Reservation Class
+class Reservation:
+    def __init__(self, reservationID, customerName, hotelName, checkInDate, checkOutDate, roomType, totalCost, roomCost, taxesFees):
+        # Initializing attributes for reservation details
+        self.__reservationID = reservationID  # private attribute
+        self.__customerName = customerName  # private attribute
+        self.__hotelName = hotelName  # private attribute
+        self.__checkInDate = checkInDate  # private attribute
+        self.__checkOutDate = checkOutDate  # private attribute
+        self.__roomType = roomType  # private attribute
+        self.__totalCost = totalCost  # private attribute
+        self.__roomCost = roomCost  # private attribute
+        self.__taxesFees = taxesFees  # private attribute
+
+    # Getter and Setter Methods for reservation details
+    def get_reservationID(self):
+        return self.__reservationID
+    
+    def set_reservationID(self, reservationID):
+        self.__reservationID = reservationID
+
+    def get_customerName(self):
+        return self.__customerName
+
+    def set_customerName(self, customerName):
+        self.__customerName = customerName
+
+    def get_totalCost(self):
+        return self.__totalCost
+
+    def set_totalCost(self, totalCost):
+        self.__totalCost = totalCost
+
+    # Function to confirm the reservation
+    def confirmReservation(self):
+        # Prints a detailed confirmation receipt with reservation details
+        print(f"Description: Hotel Reservation System\nYour Reservation is Confirmed\nThank you for your reservation.")
+        print(f"Please print your hotel receipt and show it at check in.\n")
+        print(f"Your Name: {self.__customerName}")
+        print(f"Priceline Trip Number: {self.__reservationID}")
+        print(f"Hotel Confirmation Number: 52523687")
+        print(f"{self.__hotelName} Los Alamos\n2455 Trinity Drive")
+        print(f"Check-In: {self.__checkInDate}")
+        print(f"Check-Out: {self.__checkOutDate}")
+        print("87544")
+        print(f"Room Type: {self.__roomType}\nNumber of Nights: 2")
+        print("Phone: 505-661-1110")
+        print("Number of Rooms: 1")
+        print(f"Room 1: {self.__customerName}\n")
+        print(f"Summary of Charges\nBilling Name: {self.__customerName}\nCredit Card: Mastercard (ending in 9904)")
+        print(f"Room Cost: ${self.__roomCost:.2f} avg per room, per night")
+        print(f"Room Subtotal: ${self.__roomCost * 2:.2f}")
+        print(f"Taxes and Fees: ${self.__taxesFees:.2f}")
+        print(f"Total Charges: ${self.__totalCost:.2f}\nprices are in US dollars")
+
+    # Placeholder function to modify reservation details
+    def modifyReservation(self, newDetails):
+        # This function will be responsible for modifying reservation details
+        pass  # To be implemented in future
+
+    # Placeholder function to cancel the reservation
+    def cancelReservation(self):
+        # This function will be responsible for canceling the reservation
+        pass  # To be implemented in future
