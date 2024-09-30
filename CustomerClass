@@ -1,0 +1,43 @@
+# Customer Class
+class Customer:
+    def __init__(self, customerID, name, email, phoneNumber):
+        # Initializing attributes for customer details
+        self.__customerID = customerID  # private attribute
+        self.__name = name  # private attribute
+        self.__email = email  # private attribute
+        self.__phoneNumber = phoneNumber  # private attribute
+
+    # Getter and Setter Methods for customer details
+    def get_customerID(self):
+        return self.__customerID
+    
+    def set_customerID(self, customerID):
+        self.__customerID = customerID
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, name):
+        self.__name = name
+
+    def get_email(self):
+        return self.__email
+
+    def set_email(self, email):
+        self.__email = email
+
+    def get_phoneNumber(self):
+        return self.__phoneNumber
+
+    def set_phoneNumber(self, phoneNumber):
+        self.__phoneNumber = phoneNumber
+
+    # Placeholder function for making a reservation
+    def makeReservation(self, reservationDetails):
+        # This function will create a new reservation for the customer
+        pass  # To be implemented in future
+
+    # Placeholder function for canceling a reservation
+    def cancelReservation(self, reservationID):
+        # This function will handle reservation cancellations
+        pass  # To be implemented in future
