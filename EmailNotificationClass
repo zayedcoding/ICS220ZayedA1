@@ -1,0 +1,34 @@
+# EmailNotification Class
+class EmailNotification:
+    def __init__(self, emailID, recipient, subject, body, timestamp):
+        # Initializing attributes for email notification details
+        self.__emailID = emailID  # private attribute
+        self.__recipient = recipient  # private attribute
+        self.__subject = subject  # private attribute
+        self.__body = body  # private attribute
+        self.__timestamp = timestamp  # private attribute
+
+    # Getter and Setter Methods for email notification details
+    def get_emailID(self):
+        return self.__emailID
+    
+    def set_emailID(self, emailID):
+        self.__emailID = emailID
+
+    def get_recipient(self):
+        return self.__recipient
+
+    def set_recipient(self, recipient):
+        self.__recipient = recipient
+
+    def get_timestamp(self):
+        return self.__timestamp
+
+    def set_timestamp(self, timestamp):
+        self.__timestamp = timestamp
+
+    # Function to send an email notification
+    def sendEmail(self):
+        # Prints the email sending process (for simulation purposes)
+        print(f"Sending Email to {self.__recipient} with subject: {self.__subject}")
+        pass  # Actual email sending logic to be implemented
