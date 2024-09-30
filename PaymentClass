@@ -1,0 +1,39 @@
+# Payment Class
+class Payment:
+    def __init__(self, paymentID, reservationID, paymentMethod, amount, paymentDate):
+        # Initializing attributes for payment details
+        self.__paymentID = paymentID  # private attribute
+        self.__reservationID = reservationID  # private attribute
+        self.__paymentMethod = paymentMethod  # private attribute
+        self.__amount = amount  # private attribute
+        self.__paymentDate = paymentDate  # private attribute
+
+    # Getter and Setter Methods for payment details
+    def get_paymentID(self):
+        return self.__paymentID
+    
+    def set_paymentID(self, paymentID):
+        self.__paymentID = paymentID
+
+    def get_amount(self):
+        return self.__amount
+
+    def set_amount(self, amount):
+        self.__amount = amount
+
+    def get_paymentDate(self):
+        return self.__paymentDate
+
+    def set_paymentDate(self, paymentDate):
+        self.__paymentDate = paymentDate
+
+    # Placeholder function to process a payment
+    def processPayment(self):
+        # This function will handle the payment process for a reservation
+        print(f"Processing payment of ${self.__amount:.2f} using {self.__paymentMethod}.")
+        pass  # To be implemented in future
+
+    # Placeholder function to refund a payment
+    def refundPayment(self, reservationID):
+        # This function will handle refunding the payment for a canceled reservation
+        pass  # To be implemented in future
