@@ -1,0 +1,29 @@
+# Creating a Customer object
+customer = Customer(customerID=1, name="Ted Vera", email="tedvera@mac.com", phoneNumber="505-661-1110")
+
+# Creating a Reservation object with all required details
+reservation = Reservation(reservationID=15549850358, customerName=customer.get_name(), hotelName="Comfort Inn & Suites",
+                          checkInDate="Sun, Aug 22, 2010-03:00 PM", checkOutDate="Tue, Aug 24, 2010-12:00 PM",
+                          roomType="2 Queen Beds/No Smoking/Desk/Safe/Coffee Maker In Room/Hair Dryer", totalCost=201.48,
+                          roomCost=89.95, taxesFees=21.58)
+
+# Creating a Payment object for the reservation
+payment = Payment(paymentID=12345, reservationID=reservation.get_reservationID(), paymentMethod="Mastercard (ending in 9904)",
+                  amount=201.48, paymentDate="Aug 22, 2010")
+
+# Creating an EmailNotification object for confirmation email
+email_notification = EmailNotification(emailID=1, recipient=customer.get_email(),
+                                       subject="Hotel Reservation Confirmation",
+                                       body="Your reservation at Comfort Inn & Suites is confirmed.",
+                                       timestamp="Aug 22, 2010")
+
+# Displaying the reservation details (This will be the printed output matching the desired format)
+reservation.confirmReservation()
+
+# Simulating the payment processing
+print("\nProcessing Payment...")
+payment.processPayment()
+
+# Sending the confirmation email
+print("\nSending Confirmation Email...")
+email_notification.sendEmail()  # Simulating email send
