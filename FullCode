@@ -1,0 +1,221 @@
+# Full code including the creation and testing of objects
+
+# Reservation Class
+class Reservation:
+    def __init__(self, reservationID, customerName, hotelName, checkInDate, checkOutDate, roomType, totalCost, roomCost, taxesFees):
+        # Initializing attributes for reservation details
+        self.__reservationID = reservationID  # private attribute
+        self.__customerName = customerName  # private attribute
+        self.__hotelName = hotelName  # private attribute
+        self.__checkInDate = checkInDate  # private attribute
+        self.__checkOutDate = checkOutDate  # private attribute
+        self.__roomType = roomType  # private attribute
+        self.__totalCost = totalCost  # private attribute
+        self.__roomCost = roomCost  # private attribute
+        self.__taxesFees = taxesFees  # private attribute
+
+    # Getter and Setter Methods for reservation details
+    def get_reservationID(self):
+        return self.__reservationID
+    
+    def set_reservationID(self, reservationID):
+        self.__reservationID = reservationID
+
+    def get_customerName(self):
+        return self.__customerName
+
+    def set_customerName(self, customerName):
+        self.__customerName = customerName
+
+    def get_totalCost(self):
+        return self.__totalCost
+
+    def set_totalCost(self, totalCost):
+        self.__totalCost = totalCost
+
+    # Function to confirm the reservation
+    def confirmReservation(self):
+        # Prints a detailed confirmation receipt with reservation details
+        print(f"Description: Hotel Reservation System\nYour Reservation is Confirmed\nThank you for your reservation.")
+        print(f"Please print your hotel receipt and show it at check in.\n")
+        print(f"Your Name: {self.__customerName}")
+        print(f"Priceline Trip Number: {self.__reservationID}")
+        print(f"Hotel Confirmation Number: 52523687")
+        print(f"{self.__hotelName} Los Alamos\n2455 Trinity Drive")
+        print(f"Check-In: {self.__checkInDate}")
+        print(f"Check-Out: {self.__checkOutDate}")
+        print("87544")
+        print(f"Room Type: {self.__roomType}\nNumber of Nights: 2")
+        print("Phone: 505-661-1110")
+        print("Number of Rooms: 1")
+        print(f"Room 1: {self.__customerName}\n")
+        print(f"Summary of Charges\nBilling Name: {self.__customerName}\nCredit Card: Mastercard (ending in 9904)")
+        print(f"Room Cost: ${self.__roomCost:.2f} avg per room, per night")
+        print(f"Room Subtotal: ${self.__roomCost * 2:.2f}")
+        print(f"Taxes and Fees: ${self.__taxesFees:.2f}")
+        print(f"Total Charges: ${self.__totalCost:.2f}\nprices are in US dollars")
+
+    # Placeholder function to modify reservation details
+    def modifyReservation(self, newDetails):
+        # This function will be responsible for modifying reservation details
+        pass  # To be implemented in future
+
+    # Placeholder function to cancel the reservation
+    def cancelReservation(self):
+        # This function will be responsible for canceling the reservation
+        pass  # To be implemented in future
+
+
+# Customer Class
+class Customer:
+    def __init__(self, customerID, name, email, phoneNumber):
+        # Initializing attributes for customer details
+        self.__customerID = customerID  # private attribute
+        self.__name = name  # private attribute
+        self.__email = email  # private attribute
+        self.__phoneNumber = phoneNumber  # private attribute
+
+    # Getter and Setter Methods for customer details
+    def get_customerID(self):
+        return self.__customerID
+    
+    def set_customerID(self, customerID):
+        self.__customerID = customerID
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, name):
+        self.__name = name
+
+    def get_email(self):
+        return self.__email
+
+    def set_email(self, email):
+        self.__email = email
+
+    def get_phoneNumber(self):
+        return self.__phoneNumber
+
+    def set_phoneNumber(self, phoneNumber):
+        self.__phoneNumber = phoneNumber
+
+    # Placeholder function for making a reservation
+    def makeReservation(self, reservationDetails):
+        # This function will create a new reservation for the customer
+        pass  # To be implemented in future
+
+    # Placeholder function for canceling a reservation
+    def cancelReservation(self, reservationID):
+        # This function will handle reservation cancellations
+        pass  # To be implemented in future
+
+
+# Payment Class
+class Payment:
+    def __init__(self, paymentID, reservationID, paymentMethod, amount, paymentDate):
+        # Initializing attributes for payment details
+        self.__paymentID = paymentID  # private attribute
+        self.__reservationID = reservationID  # private attribute
+        self.__paymentMethod = paymentMethod  # private attribute
+        self.__amount = amount  # private attribute
+        self.__paymentDate = paymentDate  # private attribute
+
+    # Getter and Setter Methods for payment details
+    def get_paymentID(self):
+        return self.__paymentID
+    
+    def set_paymentID(self, paymentID):
+        self.__paymentID = paymentID
+
+    def get_amount(self):
+        return self.__amount
+
+    def set_amount(self, amount):
+        self.__amount = amount
+
+    def get_paymentDate(self):
+        return self.__paymentDate
+
+    def set_paymentDate(self, paymentDate):
+        self.__paymentDate = paymentDate
+
+    # Placeholder function to process a payment
+    def processPayment(self):
+        # This function will handle the payment process for a reservation
+        print(f"Processing payment of ${self.__amount:.2f} using {self.__paymentMethod}.")
+        pass  # To be implemented in future
+
+    # Placeholder function to refund a payment
+    def refundPayment(self, reservationID):
+        # This function will handle refunding the payment for a canceled reservation
+        pass  # To be implemented in future
+
+
+# EmailNotification Class
+class EmailNotification:
+    def __init__(self, emailID, recipient, subject, body, timestamp):
+        # Initializing attributes for email notification details
+        self.__emailID = emailID  # private attribute
+        self.__recipient = recipient  # private attribute
+        self.__subject = subject  # private attribute
+        self.__body = body  # private attribute
+        self.__timestamp = timestamp  # private attribute
+
+    # Getter and Setter Methods for email notification details
+    def get_emailID(self):
+        return self.__emailID
+    
+    def set_emailID(self, emailID):
+        self.__emailID = emailID
+
+    def get_recipient(self):
+        return self.__recipient
+
+    def set_recipient(self, recipient):
+        self.__recipient = recipient
+
+    def get_timestamp(self):
+        return self.__timestamp
+
+    def set_timestamp(self, timestamp):
+        self.__timestamp = timestamp
+
+    # Function to send an email notification
+    def sendEmail(self):
+        # Prints the email sending process (for simulation purposes)
+        print(f"Sending Email to {self.__recipient} with subject: {self.__subject}")
+        pass  # Actual email sending logic to be implemented
+
+
+# Testing the objects and their functionality
+
+# Creating a Customer object
+customer = Customer(customerID=1, name="Ted Vera", email="tedvera@mac.com", phoneNumber="505-661-1110")
+
+# Creating a Reservation object with all required details
+reservation = Reservation(reservationID=15549850358, customerName=customer.get_name(), hotelName="Comfort Inn & Suites",
+                          checkInDate="Sun, Aug 22, 2010-03:00 PM", checkOutDate="Tue, Aug 24, 2010-12:00 PM",
+                          roomType="2 Queen Beds/No Smoking/Desk/Safe/Coffee Maker In Room/Hair Dryer", totalCost=201.48,
+                          roomCost=89.95, taxesFees=21.58)
+
+# Creating a Payment object for the reservation
+payment = Payment(paymentID=12345, reservationID=reservation.get_reservationID(), paymentMethod="Mastercard (ending in 9904)",
+                  amount=201.48, paymentDate="Aug 22, 2010")
+
+# Creating an EmailNotification object for confirmation email
+email_notification = EmailNotification(emailID=1, recipient=customer.get_email(),
+                                       subject="Hotel Reservation Confirmation",
+                                       body="Your reservation at Comfort Inn & Suites is confirmed.",
+                                       timestamp="Aug 22, 2010")
+
+# Displaying the reservation details (This will be the printed output matching the desired format)
+reservation.confirmReservation()
+
+# Simulating the payment processing
+print("\nProcessing Payment...")
+payment.processPayment()
+
+# Sending the confirmation email
+print("\nSending Confirmation Email...")
+email_notification.sendEmail()  # Simulating email send
